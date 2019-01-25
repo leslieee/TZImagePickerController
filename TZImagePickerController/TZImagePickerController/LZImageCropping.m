@@ -8,6 +8,13 @@
 
 #import "LZImageCropping.h"
 #import "sys/utsname.h"
+
+#define RGBHex(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
+
 @interface LZImageCropping ()<UIScrollViewDelegate>
 {
     CGFloat _selfHeight;
@@ -416,7 +423,7 @@
         [_sureButton setTitle:@"完成" forState:UIControlStateNormal];
         [_sureButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
         [_sureButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
-        [_sureButton setTitleColor:[UIColor colorWithRed:89 / 256.0 green:182 / 256.0 blue:215 / 256.0 alpha:1] forState:UIControlStateNormal];
+        [_sureButton setTitleColor:RGBHex(0xfadd44) forState:UIControlStateNormal];
         [_sureButton addTarget:self action:@selector(sureButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _sureButton;
