@@ -128,7 +128,7 @@ alpha:1.0]
     }
 
     if (_mainColor && _sureButton) {
-        [_sureButton setTitleColor:_mainColor forState:0];
+        [_sureButton setTitleColor:RGBHex(0xfadd44) forState:0];
     }
     if (_backImage && _cancleButton) {
         [_cancleButton setImage:_backImage forState:UIControlStateNormal];
@@ -480,7 +480,7 @@ alpha:1.0]
 - (void)setMainColor:(UIColor *)mainColor {
     _mainColor = mainColor;
     if (_mainColor && _sureButton) {
-        [_sureButton setTitleColor:_mainColor forState:0];
+        [_sureButton setTitleColor:RGBHex(0xfadd44) forState:0];
     }
 }
 
