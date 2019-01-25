@@ -19,6 +19,12 @@
 #import "LZImageCropping.h"
 #import "ZLEditVideoController.h"
 
+#define RGBHex(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+alpha:1.0]
+
 @interface TZPhotoPickerController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIAlertViewDelegate,LZImageCroppingDelegate> {
     NSMutableArray *_models;
     
@@ -585,6 +591,7 @@ static CGFloat itemMargin = 5;
             NSArray *timeArr = [model.timeLength componentsSeparatedByString:@":"];
             if (timeArr.count == 2 && (([timeArr[1] integerValue] == 0 && [timeArr[0] integerValue] <= 5) || ([timeArr[1] integerValue] > 0 && [timeArr[0] integerValue] <= 4)) && tzImagePickerVc.directEditVideo == false) {
                 UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"温馨提示" preferredStyle:UIAlertControllerStyleActionSheet];
+                [alertController.view setTintColor:RGBHex(0xfadd44)];
                 UIAlertAction *uploadAction = [UIAlertAction actionWithTitle:@"快速上传(支持5分钟以内)" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     NSLog(@"uploadAction");
                     [tzImagePickerVc showProgressHUD];
