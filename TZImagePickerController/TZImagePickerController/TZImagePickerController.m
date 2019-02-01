@@ -471,6 +471,7 @@
 }
 
 - (instancetype)initWithMaxImagesCount:(NSInteger)maxImagesCount columnNumber:(NSInteger)columnNumber delegate:(id<TZImagePickerControllerDelegate>)delegate pushPhotoPickerVc:(BOOL)pushPhotoPickerVc mainColor:(UIColor *)mainColor dontNeedEditVideo:(BOOL)dontNeedEditVideo {
+    _dontNeedEditVideo = dontNeedEditVideo;
     _pushPhotoPickerVc = pushPhotoPickerVc;
     _mainColor = mainColor;
     TZAlbumPickerController *albumPickerVc = [[TZAlbumPickerController alloc] init];
