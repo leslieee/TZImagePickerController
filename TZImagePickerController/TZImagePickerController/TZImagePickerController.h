@@ -57,6 +57,7 @@
 - (instancetype)initWithSelectedAssets:(NSMutableArray *)selectedAssets selectedPhotos:(NSMutableArray *)selectedPhotos index:(NSInteger)index mainColor:(UIColor *)mainColor;
 /// This init method for crop photo / 用这个初始化方法以裁剪图片
 - (instancetype)initCropTypeWithAsset:(id)asset photo:(UIImage *)photo completion:(void (^)(UIImage *cropImage,id asset))completion mainColor:(UIColor *)mainColor;
+- (instancetype)initWithMaxImagesCount:(NSInteger)maxImagesCount columnNumber:(NSInteger)columnNumber delegate:(id<TZImagePickerControllerDelegate>)delegate pushPhotoPickerVc:(BOOL)pushPhotoPickerVc mainColor:(UIColor *)mainColor dontNeedEditVideo:(BOOL)dontNeedEditVideo;
 
 #pragma mark -
 /// Default is 9 / 默认最大可选9张图片
@@ -234,7 +235,8 @@
 @property (nonatomic) NSUInteger minEditVideoTime;
 /// 直接进入视频编辑 默认NO 弹窗提示是否快速上传或者编辑后上传
 @property (nonatomic) BOOL directEditVideo;
-
+/// 聊天 详情 发送视频不需要编辑
+@property (nonatomic, assign) BOOL dontNeedEditVideo;
 
 // MARK: end
 

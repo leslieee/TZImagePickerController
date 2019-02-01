@@ -17,6 +17,7 @@
 
 /// 整个项目主题色
 @property (nonatomic, strong) UIColor *mainColor;
+@property (nonatomic, assign) BOOL dontNeedEditVideo;
 
 @end
 

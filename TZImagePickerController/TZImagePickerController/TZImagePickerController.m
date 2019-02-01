@@ -596,6 +596,7 @@
         TZPhotoPickerController *photoPickerVc = [[TZPhotoPickerController alloc] init];
         photoPickerVc.isFirstAppear = YES;
         photoPickerVc.columnNumber = self.columnNumber;
+        photoPickerVc.dontNeedEditVideo = self.dontNeedEditVideo;
         if (_mainColor) {
             photoPickerVc.mainColor = _mainColor;
         }
