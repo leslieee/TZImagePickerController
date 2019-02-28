@@ -334,7 +334,7 @@
     }
     UILabel *titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 40)];
     titleLab.textAlignment = NSTextAlignmentCenter;
-    titleLab.text = @"编辑视频";
+    titleLab.text = @"裁剪视频";
     titleLab.font = [UIFont fontWithName:@"PingFangSC-Medium" size:18];
     titleLab.textColor = [UIColor whiteColor];
     [self.customNav addSubview:titleLab];
