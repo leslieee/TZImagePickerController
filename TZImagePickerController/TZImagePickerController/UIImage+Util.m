@@ -13,7 +13,7 @@
     UIImage *newImage = [self imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     
     UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
-    [BLUECOLOR set];
+    [[UIColor whiteColor] set];
     [newImage drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
     newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

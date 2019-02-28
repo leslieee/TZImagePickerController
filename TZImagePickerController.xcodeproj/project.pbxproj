@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25AB084E2227DC790058E28A /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AB084C2227DC790058E28A /* UIImage+Util.m */; };
 		38B06231211896340035DCE3 /* ZLEditVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0622F211896340035DCE3 /* ZLEditVideoController.m */; };
 		38B06232211896340035DCE3 /* ZLEditVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0622F211896340035DCE3 /* ZLEditVideoController.m */; };
 		38B06233211896340035DCE3 /* ZLEditVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B06230211896340035DCE3 /* ZLEditVideoController.h */; };
@@ -119,6 +120,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25AB084C2227DC790058E28A /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
+		25AB084D2227DC790058E28A /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
 		38B0622F211896340035DCE3 /* ZLEditVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLEditVideoController.m; sourceTree = "<group>"; };
 		38B06230211896340035DCE3 /* ZLEditVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLEditVideoController.h; sourceTree = "<group>"; };
 		38B06234211897360035DCE3 /* TSLocalVideoCoverSelectedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLocalVideoCoverSelectedVC.h; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 				6DC84D091DF5358500A107A9 /* TZImageCropManager.m */,
 				902938D61EE2D02C000F2F8F /* TZLocationManager.h */,
 				902938D71EE2D02C000F2F8F /* TZLocationManager.m */,
+				25AB084D2227DC790058E28A /* UIImage+Util.h */,
+				25AB084C2227DC790058E28A /* UIImage+Util.m */,
 				90EBF5D41C2E298000CB9BCC /* UIView+Layout.h */,
 				90EBF5D51C2E298000CB9BCC /* UIView+Layout.m */,
 				6D5358CB1D64600F00928CC6 /* NSBundle+TZImagePicker.h */,
@@ -576,6 +581,7 @@
 				6D32B9BD1CD83640005CE1E0 /* LxGridViewFlowLayout.m in Sources */,
 				38B06231211896340035DCE3 /* ZLEditVideoController.m in Sources */,
 				6D4608311DFFC60D004FB009 /* TZGifPhotoPreviewController.m in Sources */,
+				25AB084E2227DC790058E28A /* UIImage+Util.m in Sources */,
 				38B06237211897360035DCE3 /* TSLocalVideoCoverSelectedVC.m in Sources */,
 				900EF0161C2C134900EA709B /* TZPhotoPreviewCell.m in Sources */,
 				900E65871C2BB8D5003D9A9E /* ViewController.m in Sources */,

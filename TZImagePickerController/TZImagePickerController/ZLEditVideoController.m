@@ -12,6 +12,7 @@
 #import <sys/utsname.h>
 #import "TZImagePickerController.h"
 #import "TSLocalVideoCoverSelectedVC.h"
+#import "UIImage+Util.h"
 
 @interface ZLEditVideoUX : NSObject
 
@@ -330,7 +331,8 @@
     if (_backImage) {
         [backBtn setImage:_backImage forState:UIControlStateNormal];
     } else {
-        [backBtn setImage:[UIImage imageNamedFromMyBundle:@"topbar_back"] forState:UIControlStateNormal];
+     
+        [backBtn setImage: [[UIImage imageNamedFromMyBundle:@"topbar_back"] converToMainColor] forState:UIControlStateNormal];
     }
     UILabel *titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 40)];
     titleLab.textAlignment = NSTextAlignmentCenter;
