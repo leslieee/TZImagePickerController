@@ -129,6 +129,8 @@ static CGFloat itemMargin = 5;
         if (!tzImagePickerVc.sortAscendingByModificationDate && _isFirstAppear && iOS8Later && _model.isCameraRoll) {
             [[TZImageManager manager] getCameraRollAlbum:tzImagePickerVc.allowPickingVideo allowPickingImage:tzImagePickerVc.allowPickingImage needFetchAssets:YES completion:^(TZAlbumModel *model) {
                 _model = model;
+                
+                NSLog(@"%@",_model);
                 _models = [NSMutableArray arrayWithArray:_model.models];
                 [self initSubviews];
             }];
@@ -516,6 +518,10 @@ static CGFloat itemMargin = 5;
     } else {
         model = _models[indexPath.row - 1];
     }
+//    for ( TZAssetModel *tzModel in _model) {
+//        NSLog(@"tzModel.isSelected =%d",tzModel.isSelected);
+//
+    NSLog(@"model.isSelcte===%d", model.isSelected);
     cell.allowPickingGif = tzImagePickerVc.allowPickingGif;
     cell.model = model;
     cell.showSelectBtn = tzImagePickerVc.showSelectBtn;
