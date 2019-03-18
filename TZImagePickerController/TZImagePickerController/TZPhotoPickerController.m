@@ -983,10 +983,12 @@ static CGFloat itemMargin = 5;
             _doneButton.backgroundColor = tzImagePickerVc.oKButtonBackGroundColorEnabled;
         } else {
             _doneButton.backgroundColor = tzImagePickerVc.oKButtonBackGroundColorDisabled;
+               [_doneButton setTitle:[NSString stringWithFormat:@"完成(%d/%ld)",0,(long)tzImagePickerVc.maxImagesCount] forState:UIControlStateDisabled];
         }
     } else {
         [_doneButton setTitle:@"完成" forState:UIControlStateNormal];
         _doneButton.backgroundColor = tzImagePickerVc.oKButtonBackGroundColorEnabled;
+        
     }
     _originalPhotoButton.enabled = tzImagePickerVc.selectedModels.count > 0;
     _originalPhotoButton.selected = (_isSelectOriginalPhoto && _originalPhotoButton.enabled);
